@@ -1,0 +1,832 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>127/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 15 19:55:39 EDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>130 seconds (130065 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for invalid username", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Please enter a valid username]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Please enter a valid username&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1971344738", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1971344738'><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Please enter a valid username]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Please enter a valid username&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:51)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for password with characters less than eight", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Password should contain at least 8 characters]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password should contain at least 8 characters&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:75)
+</pre></div><a href='#' onClick='toggleBox("stack-trace73254846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace73254846'><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Password should contain at least 8 characters]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password should contain at least 8 characters&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:75)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for username already exists", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Username already exists]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Username already exists&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:59)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1803306804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1803306804'><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Username already exists]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Username already exists&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:59)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for password too similar to your other personal information", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;password[_mismatch:The two password fields didn’t match].&gt; but was:&lt;password[ can’t be too similar to your other personal information].&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;password can’t be too similar to your other personal information.&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace769526324", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace769526324'><pre>org.junit.ComparisonFailure: expected:&lt;password[_mismatch:The two password fields didn’t match].&gt; but was:&lt;password[ can’t be too similar to your other personal information].&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;password can’t be too similar to your other personal information.&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:91)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for password with only numbers", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match].&gt; but was:&lt;[Password can’t be entirely numeric].&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password can’t be entirely numeric.&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:83)
+</pre></div><a href='#' onClick='toggleBox("stack-trace473030237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace473030237'><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match].&gt; but was:&lt;[Password can’t be entirely numeric].&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password can’t be entirely numeric.&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:83)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for commonly used password", "Registration page"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Password can’t be commonly used password]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password can’t be commonly used password&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:99)
+</pre></div><a href='#' onClick='toggleBox("stack-trace196511386", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace196511386'><pre>org.junit.ComparisonFailure: expected:&lt;[password_mismatch:The two password fields didn’t match.]&gt; but was:&lt;[Password can’t be commonly used password]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.dsalgo.pageobjects.RegistrationPage.errormessagevalidation(RegistrationPage.java:81)
+	at StepdefinitionHomepage.Registration_Stepdef.it_should_display_an_error_message(Registration_Stepdef.java:114)
+	at ✽.It should display an error message &quot;Password can’t be commonly used password&quot;(file:///C:/Users/User/eclipse-workspace/Ninja_Conqueror_DS_Algo_Project/src/test/resources/features/2_Registration.feature:99)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Types of Tree page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Binary trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below Username textbox", "Registration page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Types of Linked List page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Binary Search Trees" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Queue Data Structure Page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Arrays in Python page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Practice qns search the array page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verifying signout link", "SignInPage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid inputs", "SignInPage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor for Time Complexity page", "DataStructures Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Implementation" Page", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to a Overview of Trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation of Queue in Python link page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Arrays Using List page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "DS Algo portal", "Graph page"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below Password textbox", "Registration page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Practice qns Square of Sorted Array page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Introduction page", "Linked list module"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in Editor for Queue Operations page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for code with invalid syntax in tryEditor for Time Complexity page", "DataStructures Module"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Applications of Binary trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "DS Algo portal", "Array module"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Binary Search Trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User on login page and login with invalid and valid inputs from Excel", "SignInPage"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in Editor for Implementation of queue page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Traversals illustration page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "DataStructures Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Basic Operation List page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Types of Binary trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in Editor for Implementation using collections page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is directed to "Stack" Page", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation of Binary Trees Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Graph Representation page", "Graph page"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to a page having an tryEditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verifying Register link", "SignInPage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Tree Traversals" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Applications page having an tryEditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to queue page and click on Implementation using array link", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Practice qns Max Consecutive ones page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below Password Confirmation textbox", "Registration page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user should be directed to editor page with run button to test python code", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Types of Binary trees" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for invalid code in Editor for Implementation of queue page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Overview of Trees" page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Types of Trees" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Binary trees" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in Editor for Implementation using collections page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is directed to "Tree" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to queue page and click on Queue Operations link", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user should be directed to editor page with run button to test python code", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Traversals illustration" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for invalid code in Editor", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation of BST page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Graph page", "Graph page"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Insertion page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Terminologies" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Data Structure introduction page", "DataStructures Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to creating Linked List page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User validate Home page", "Login into Home page"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Practice qns page", "Linked list module"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation page having an tryeditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to QueueOp page and click on Practice Questions", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Binary Tree Traversals page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for commonly used password", "Registration page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Time Complexity page", "DataStructures Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for invalid code in Editor for Implementation using collections page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "Linked list module"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for invalid code in Editor for Implementation using array page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Deletion page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation in Python Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Applications of Binary Trees Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Traversal page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to queue page and click on Implementation using collections deque link", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user validating "Practice Questions" page", "TreePage"</td>
+<td></td>
+<td>1</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user should be directed to editor page with run button to test python code from Implementation using collections page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Tree Traversals page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syntax", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Practice qns find odd or even number page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syntax", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Applications" in stack Page", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to a page having an tryEditor from Time Complexity page", "DataStructures Module"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Implementation of BST" Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Practice Questions" in stack Page", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Application of Array page", "Array module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for password mismatch", "Registration page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigate to Practice page", "Graph page"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation in Python page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user should be directed to editor page with run button to test python code from Implementation using array page", "Queue"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implementation of Binary Trees page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Terminologies page having an tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is logged in to DS Algo portal", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to run code in tryEditor", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to binary tree traversals Page", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syntax", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to "Operations in Stack" page", "Stack"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to get the error message for invalid syantax", "TreePage"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+<tr>
+<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is able to navigate to Implement Linked List in python page", "Linked list module"</td>
+<td></td>
+<td>2</td>
+<td>runner.TestNGRunner@7a8c8dcf</td></tr>
+</table><p>
+</body>
+</html>
